@@ -1,0 +1,187 @@
+/* Đảm bảo toàn bộ trang hiển thị tốt trên mọi kích thước màn hình */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Đảm bảo giao diện vừa với màn hình nhỏ */
+    max-width: 400px; /* Giới hạn kích thước trên màn hình lớn */
+  }
+  
+  h1 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  #balance, #currentBet {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .betting {
+    margin-bottom: 20px;
+  }
+  
+  .money-button {
+    padding: 10px;
+    font-size: 14px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .money-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .button.tai {
+    background-color: #4caf50;
+  }
+  
+  .button.tai:hover {
+    background-color: #45a049;
+  }
+  
+  .button.xiu {
+    background-color: #f44336;
+  }
+  
+  .button.xiu:hover {
+    background-color: #e53935;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  #dice {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  .timer {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Responsive adjustments for smaller devices */
+  @media (max-width: 600px) {
+    .money-button {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .button {
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  
+    #result, #dice {
+      font-size: 16px;
+    }
+  
+    #balance, #currentBet {
+      font-size: 14px;
+    }
+  }
+  
+  /* Phong cách thông báo */
+.notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1000;
+  }
+  
+  .notification.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .login-container {
+    text-align: center;
+    margin-top: 20vh;
+  }
+  
+  .login-container input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 200px;
+  }
+  
+  .login-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .user-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  

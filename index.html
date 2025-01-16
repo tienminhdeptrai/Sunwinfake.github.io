@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tài Xỉu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginContainer" class="login-container">
+        <h2>Đăng nhập</h2>
+        <input type="text" id="usernameInput" placeholder="Nhập tên tài khoản">
+        <input type="password" id="passwordInput" placeholder="Nhập mật khẩu">
+        <button onclick="login()">Đăng nhập</button>
+        <p>Chưa có tài khoản? <button onclick="showRegisterForm()">Đăng ký</button></p>
+      </div>
+      
+      <div id="registerContainer" class="login-container hidden">
+        <h2>Đăng ký</h2>
+        <input type="text" id="registerUsernameInput" placeholder="Nhập tên tài khoản">
+        <input type="password" id="registerPasswordInput" placeholder="Nhập mật khẩu">
+        <button onclick="register()">Đăng ký</button>
+        <button onclick="showLoginForm()">Quay lại Đăng nhập</button>
+      </div>
+           
+      <div id="gameContainer" class="hidden">
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+          </div>
+  <div class="container">
+    <h1>Game Tài Xỉu</h1>
+    <div id="balance">Số dư: 100000 đồng</div>
+    <div id="currentBet">Tiền cược hiện tại: 0 đồng</div>
+    <div class="betting">
+      <button class="money-button" onclick="addBetAmount(1000)">1k</button>
+      <button class="money-button" onclick="addBetAmount(10000)">10k</button>
+      <button class="money-button" onclick="addBetAmount(50000)">50k</button>
+      <button class="money-button" onclick="addBetAmount(100000)">100k</button>
+      <button class="money-button" onclick="addBetAmount(200000)">200k</button>
+      <button class="money-button" onclick="addBetAmount(500000)">500k</button>
+    </div>
+    <div class="buttons">
+      <button class="button tai" onclick="placeBet('Tài')">Đặt Tài</button>
+      <button class="button xiu" onclick="placeBet('Xỉu')">Đặt Xỉu</button>
+    </div>
+    <div id="result">Chờ kết quả...</div>
+    <div id="dice"></div>
+    <div id="timer" class="timer">Thời gian còn: 20 giây</div>
+  </div>
+  <div id="notification" class="notification"></div>
+  <script src="script.js"></script>
+</body>
+</html>
